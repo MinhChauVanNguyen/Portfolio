@@ -26,6 +26,12 @@
 
   </head>
   <body>
+    <script type="text/javascript">
+      $("#btnPrint").live("click", function () {
+          var divContents = $("#dvContainer").html();
+          var printWindow = window.open('', '', 'height=400,width=800');
+      });
+    </script>
 
     <div id="app">
       
@@ -51,11 +57,17 @@
 
       <div class="container" align = 'center'>
         <span style='display: inline-block;'><p>Check out my projects</p></span>
-        <a href="./pdfs/STAT487.pdf" download>
-            <button class="btn" style='display:inline-block;'><i class="fa fa-download"></i> Download</button>
+
+        <a href="./pdfs/STAT487.pdf" style='text-decoration:none !important;' download>
+            <button class="btn" style='display:inline-block; text-decoration:none !important;'><i class="fa fa-download"></i> Download</button>
         </a>
+
+        <a href="./pdfs/STAT487.pdf" style='text-decoration:none !important;' id="dvContainer">
+          <button class="btn" id="btnPrint" style='display:inline-block;'><i class="fa fa-download"></i> Print</button>
+        </a>
+
       <div align='center'>
-        <embed src="./pdfs/STAT487.pdf" width="650" height="700" 
+        <embed src="./pdfs/STAT487.pdf#toolbar=0" width="650" height="700" 
         type="application/pdf">
       </div>
       </div>

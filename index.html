@@ -25,7 +25,7 @@
     <meta name="og:type" content="website" />
 
   </head>
-  <body onload="Connor()">
+  <body onload="JSfunc()">
 
     <div id="app">
 
@@ -49,163 +49,179 @@
         </div>
       </header>
 
-      <div class="container projects">
-        <p>
-        Check out my projects
-        </p>
-      </div>
+      <div class="Big_container">
 
-      <div class="container flex">
+        <div class="grid-item" style='display:none;'>
+          <a href="index.html">
+            <h1>&laquo;</h1>          
+          </a>
+        </div>
 
-          <div class="card">
+        <div class="grid-item">
+          <div class="container">
 
-            <div class="card-image">
+            <div class="flex">
+              <div class="card">
 
-              <div class="card-text">
-                <a href="stat487.html" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="stat487.html" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip1' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front1'>
+                          <img src="./img/STAT487.png" id="img1" alt="">  
+                        </div>
+                        <div class="back" id='back1'>
+                          hello
+                        </div>
+                    </div>
+                  </div>
+                
+                </div>
+
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://minhchau.shinyapps.io/oranges/" title="" target="_blank">
+                      <h4>Time Series Shiny Dashboard</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip4' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front4'>
+                          <img src="./img/oranges.png" id="img4" alt="">  
+                        </div>
+                        <div class="back" id='back4'>
+                          hello
+                        </div>
+                    </div>
+                  </div>
+                
+                </div>
+
               </div>
 
-              <div class="flip-container" id='flip1' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id='front1'>
-                      <img src="./img/STAT487.png" id="img1" alt="">  
+
+              <div class="card">
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip2' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id ='front2'>
+                          <img src="./img/ICMR.png" id="img2" alt="">  
+                        </div>
+                        <div class="back" id='back2'>
+                          hello
+                        </div>
                     </div>
-                    <div class="back" id='back1'>
-                      hello
+                  </div>
+                
+                </div>
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip5' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front5'>
+                          <img src="./img/python.png" id="img5" alt="">  
+                        </div>
+                        <div class="back" id='back5'>
+                          hello
+                        </div>
                     </div>
+                  </div>
+                
                 </div>
               </div>
-            
-            </div>
+          
 
+              <div class="card">
+                <div class="card-image">
 
-            <div class="card-image">
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
 
-              <div class="card-text">
-                <a href="https://minhchau.shinyapps.io/oranges/" title="" target="_blank">
-                  <h4>Time Series Shiny Dashboard</h4>
-                </a>
-              </div>
-
-              <div class="flip-container" id='flip4' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id='front4'>
-                      <img src="./img/oranges.png" id="img4" alt="">  
+                  <div class="flip-container" id='flip3' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front3'>
+                          <img src="./img/TSREPORT.png" id="img3" alt="">  
+                        </div>
+                        <div class="back" id='back3'>
+                          hello
+                        </div>
                     </div>
-                    <div class="back" id='back4'>
-                      hello
+                  </div>
+                
+                </div>
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip6' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front6'>
+                          <img src="./img/ICMR2.png" id="img6" alt="">  
+                        </div>
+                        <div class="back" id='back6'>
+                          hello
+                        </div>
                     </div>
+                  </div> 
                 </div>
               </div>
-            
+
+
             </div>
 
           </div>
 
-
-          <div class="card">
-
-            <div class="card-image">
-
-              <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
-              </div>
-
-              <div class="flip-container" id='flip2' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id ='front2'>
-                      <img src="./img/ICMR.png" id="img2" alt="">  
-                    </div>
-                    <div class="back" id='back2'>
-                      hello
-                    </div>
-                </div>
-              </div>
-            
-            </div>
-
-            <div class="card-image">
-
-              <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
-              </div>
-
-              <div class="flip-container" id='flip5' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id='front5'>
-                      <img src="./img/python.png" id="img5" alt="">  
-                    </div>
-                    <div class="back" id='back5'>
-                      hello
-                    </div>
-                </div>
-              </div>
-            
-            </div>
-          </div>
-      
-
-          <div class="card">
-            <div class="card-image">
-
-              <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
-              </div>
-
-              <div class="flip-container" id='flip3' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id='front3'>
-                      <img src="./img/TSREPORT.png" id="img3" alt="">  
-                    </div>
-                    <div class="back" id='back3'>
-                      hello
-                    </div>
-                </div>
-              </div>
-            
-            </div>
-
-            <div class="card-image">
-
-              <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
-              </div>
-
-              <div class="flip-container" id='flip6' ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front" id='front6'>
-                      <img src="./img/ICMR2.png" id="img6" alt="">  
-                    </div>
-                    <div class="back" id='back6'>
-                      hello
-                    </div>
-                </div>
-              </div>
-            
-            </div>
-          </div>
-      
         </div>
 
 
+        <div class="grid-item">
+          <a href="page2.html">
+            <h1>&raquo;</h1>
+          </a>
+        </div>
+
+      </div>
 
       <div class="container" align='center'>
-        <div style="margin-bottom: 2rem; margin-top:10rem">
-        &copy;2021 Minh Chau
+        <div>
+          &copy;2021 Minh Chau
         </div>
       </div>
-
-    </div>
+      <br><br>
+    
+  </div>
 
     <script src="height.js"></script>
   </body>

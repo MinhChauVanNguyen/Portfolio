@@ -1,4 +1,4 @@
-function Connor(){
+function JSfunc(){
     var img = [
         {
             flipid:'flip1',
@@ -36,6 +36,24 @@ function Connor(){
             backid: 'back6',
             imgid:'img6'
         },
+        {
+            flipid:'flip7',
+            frontid: 'front7',
+            backid: 'back7',
+            imgid:'img7'
+        },
+        {
+            flipid:'flip8',
+            frontid: 'front8',
+            backid: 'back8',
+            imgid:'img8'
+        },
+        {
+            flipid:'flip9',
+            frontid: 'front9',
+            backid: 'back9',
+            imgid:'img9'
+        }
     ]
 
     for (i = 0; i < img.length; i++) {

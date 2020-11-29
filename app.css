@@ -13,7 +13,6 @@ body {
   min-height: 100%;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -85,7 +84,6 @@ p {
 header.container,
 div.container {
   margin: 0 auto;
-  width: 95%;
 }
 @media (min-width: 1200px) {
   header.container,
@@ -109,8 +107,63 @@ div.container {
   }
 }
 
+
+.Big_container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.grid-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid-item a{
+  text-decoration: none;
+}
+
+.grid-item h1:hover{
+  text-decoration: none;
+  transform: scale(1.5);
+}
+
+.grid-item h1:hover{
+  text-decoration: none;
+  transform: scale(1.5);
+}
+
 .big-icon {
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.big-icon:hover {
+  transform: scale(1.5);
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
 }
 
 
@@ -279,4 +332,27 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
 }
