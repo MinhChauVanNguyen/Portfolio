@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
 
     <title>Minh Chau</title>
@@ -12,6 +13,7 @@
       name="description"
       content="Data and Reporting Analyst"
     />
+
     <meta itemprop="name" content="Minh Chau" />
     <meta
       itemprop="description"
@@ -21,12 +23,12 @@
     <meta name="og:url" content="/" />
     <meta name="og:site_name" content="Minh Chau" />
     <meta name="og:type" content="website" />
-    <link rel="stylesheet" href="app.css" />
 
   </head>
-  <body>
+  <body onload="Connor()">
 
     <div id="app">
+
       <header class="container" style="margin-bottom: -2rem;">
         <h1>Minh Chau</h1>
         <p>
@@ -44,9 +46,8 @@
               <i class="fa fa-linkedin big-icon"></i>
             </a>
         </p>
-      </div>
+        </div>
       </header>
-
 
       <div class="container projects">
         <p>
@@ -54,34 +55,58 @@
         </p>
       </div>
 
-      <div class="container">
-
-        <div class="flex">
+      <div class="container flex">
 
           <div class="card">
+
             <div class="card-image">
+
               <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                <a href="stat487.html" title="" target="_blank">
                   <h4>Cluster Analysis Research Project</h4>
                 </a>
               </div>
 
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="./img/STAT487.png" alt="">  
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>John Doe</h4> 
-                  </div>
+              <div class="flip-container" id='flip1' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id='front1'>
+                      <img src="./img/STAT487.png" id="img1" alt="">  
+                    </div>
+                    <div class="back" id='back1'>
+                      hello
+                    </div>
                 </div>
               </div>
+            
+            </div>
 
+
+            <div class="card-image">
+
+              <div class="card-text">
+                <a href="https://minhchau.shinyapps.io/oranges/" title="" target="_blank">
+                  <h4>Time Series Shiny Dashboard</h4>
+                </a>
+              </div>
+
+              <div class="flip-container" id='flip4' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id='front4'>
+                      <img src="./img/oranges.png" id="img4" alt="">  
+                    </div>
+                    <div class="back" id='back4'>
+                      hello
+                    </div>
+                </div>
+              </div>
+            
             </div>
 
           </div>
 
+
           <div class="card">
+
             <div class="card-image">
 
               <div class="card-text">
@@ -90,22 +115,19 @@
                 </a>
               </div>
 
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="./img/STAT487.png" alt="">  
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>John Doe</h4> 
-                  </div>
+              <div class="flip-container" id='flip2' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id ='front2'>
+                      <img src="./img/ICMR.png" id="img2" alt="">  
+                    </div>
+                    <div class="back" id='back2'>
+                      hello
+                    </div>
                 </div>
               </div>
-
+            
             </div>
-          </div>
 
-
-          <div class="card">
             <div class="card-image">
 
               <div class="card-text">
@@ -114,55 +136,77 @@
                 </a>
               </div>
 
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="./img/STAT487.png" alt="">  
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>John Doe</h4> 
-                  </div>
+              <div class="flip-container" id='flip5' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id='front5'>
+                      <img src="./img/python.png" id="img5" alt="">  
+                    </div>
+                    <div class="back" id='back5'>
+                      hello
+                    </div>
                 </div>
               </div>
-
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image">
-
-              <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                  <h4>Cluster Analysis Research Project</h4>
-                </a>
-              </div>
-
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="./img/STAT487.png" alt="">  
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>John Doe</h4> 
-                  </div>
-                </div>
-              </div>
-
+            
             </div>
           </div>
       
+
+          <div class="card">
+            <div class="card-image">
+
+              <div class="card-text">
+                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                  <h4>Cluster Analysis Research Project</h4>
+                </a>
+              </div>
+
+              <div class="flip-container" id='flip3' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id='front3'>
+                      <img src="./img/TSREPORT.png" id="img3" alt="">  
+                    </div>
+                    <div class="back" id='back3'>
+                      hello
+                    </div>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="card-image">
+
+              <div class="card-text">
+                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                  <h4>Cluster Analysis Research Project</h4>
+                </a>
+              </div>
+
+              <div class="flip-container" id='flip6' ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" id='front6'>
+                      <img src="./img/ICMR2.png" id="img6" alt="">  
+                    </div>
+                    <div class="back" id='back6'>
+                      hello
+                    </div>
+                </div>
+              </div>
+            
+            </div>
           </div>
+      
+        </div>
+
+
+
+      <div class="container" align='center'>
+        <div style="margin-bottom: 2rem; margin-top:10rem">
+        &copy;2021 Minh Chau
+        </div>
       </div>
 
-
-
-    <div class="container flex">
-      <div style="margin-bottom: 2rem; margin-top: 30rem">
-      &copy;2021 Minh Chau
-      </div>
     </div>
 
-    </div>
-   <script src="app.js"></script>
+    <script src="height.js"></script>
   </body>
 </html>
