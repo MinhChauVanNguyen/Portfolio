@@ -29,7 +29,7 @@
 
     <div id="app">
 
-      <header class="container" style="margin-bottom: -2rem;">
+      <header class="container" style="margin-bottom: -3rem;">
         <h1>Minh Chau</h1>
         <p>
           Data and Reporting Analyst in New Zealand
@@ -51,8 +51,8 @@
 
       <div class="Big_container">
 
-        <div class="grid-item" style='display:none;'>
-          <a href="index.html">
+        <div class="grid-item">
+          <a href="index.html" style="pointer-events: none;color:gray;">
             <h1>&laquo;</h1>          
           </a>
         </div>
@@ -60,10 +60,22 @@
         <div class="grid-item">
           <div class="container">
 
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')">Show all</button>
+              <button class="btn" onclick="filterSelection('ts')">Time Series</button>
+              <button class="btn" onclick="filterSelection('latex')">Latex</button>
+              <button class="btn" onclick="filterSelection('uni')">University projects</button>
+              <button class="btn" onclick="filterSelection('r')">R</button>
+              <button class="btn" onclick="filterSelection('python')">Python</button>
+              <button class="btn" onclick="filterSelection('medical')">Medical statistics</button>
+              <button class="btn" onclick="filterSelection('shiny')">Shiny</button>
+              <button class="btn" onclick="filterSelection('markdown')">Markdown</button>
+            </div>
+
             <div class="flex">
               <div class="card">
 
-                <div class="card-image">
+                <div class="card-image r">
 
                   <div class="card-text">
                     <a href="stat487.html" title="" target="_blank">
@@ -111,7 +123,7 @@
 
               <div class="card">
 
-                <div class="card-image">
+                <div class="card-image r">
 
                   <div class="card-text">
                     <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
@@ -156,7 +168,7 @@
           
 
               <div class="card">
-                <div class="card-image">
+                <div class="card-image python">
 
                   <div class="card-text">
                     <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
@@ -177,7 +189,7 @@
                 
                 </div>
 
-                <div class="card-image">
+                <div class="card-image r">
 
                   <div class="card-text">
                     <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
@@ -222,7 +234,56 @@
       <br><br>
     
   </div>
-
     <script src="height.js"></script>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("card-image");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      // Show filtered elements
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      // Hide elements that are not selected
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current control button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+
   </body>
 </html>

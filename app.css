@@ -21,18 +21,16 @@ h5 {
   line-height: 1.1;
 }
 
-header {
-  padding: 2rem 0;
-}
+
 header h1 {
   font-size: 6rem;
   text-align: center;
-  line-height: 0.9;
+  line-height: 0.4;
 }
+
 header p {
   text-align: center;
   font-size: 1.4rem;
-  margin: 1rem 0 0;
 }
 
 .contact a {
@@ -77,7 +75,7 @@ p {
 
 @media (min-width: 1024px) {
   header.container {
-    padding: 6rem 0;
+    padding: 0 ;
   }
 }
 
@@ -201,6 +199,7 @@ img {
   padding: 0;
   position: relative;
   margin-bottom: 1.5rem;
+  display:none;
   /*box-shadow: 5px 5px 5px #ccc, 
   5px 5px lightskyblue;
   -moz-box-shadow: 10px 10px 5px #ccc;
@@ -335,24 +334,32 @@ img {
 }
 
 
-.pagination {
-  display: inline-block;
+
+#myBtnContainer{
+  margin-top:2.5rem;
+  text-align:left;
 }
 
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
+.show {
+  display: block;
 }
 
-.pagination a.active {
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
 }
 
-.pagination a:hover:not(.active) {
+/* Add a light grey background on mouse-over */
+.btn:hover {
   background-color: #ddd;
-  border-radius: 5px;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
 }
