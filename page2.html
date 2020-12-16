@@ -25,11 +25,11 @@
     <meta name="og:type" content="website" />
 
   </head>
-  <body>
+  <body onload="JSfunc()">
 
     <div id="app">
 
-      <header class="container">
+      <header class="container" style="margin-bottom: -3rem;">
         <h1>Minh Chau</h1>
         <p>
           Data and Reporting Analyst in New Zealand
@@ -49,7 +49,6 @@
         </div>
       </header>
 
-      
       <div class="Big_container">
 
         <div class="grid-item">
@@ -59,108 +58,191 @@
         </div>
 
         <div class="grid-item">
+          <div class="container">
 
-      <div class="container">
-          <div class="flex">
-        <div class="card">
-            <div class="card-image">
-
-            <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                <h4>Cluster Analysis Research Project</h4>
-                </a>
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')">Show all</button>
+              <button class="btn" onclick="filterSelection('ts')">Time Series</button>
+              <button class="btn" onclick="filterSelection('latex')">Latex</button>
+              <button class="btn" onclick="filterSelection('uni')">University projects</button>
+              <button class="btn" onclick="filterSelection('r')">R</button>
+              <button class="btn" onclick="filterSelection('python')">Python</button>
+              <button class="btn" onclick="filterSelection('medical')">Medical statistics</button>
+              <button class="btn" onclick="filterSelection('shiny')">Shiny</button>
+              <button class="btn" onclick="filterSelection('markdown')">Markdown</button>
             </div>
 
-            <div class="flip-container" id='flip7' ontouchstart="this.classList.toggle('hover');" style='height:215px;'>
-                <div class="flipper">
-                    <div class="front" id='front7' style='height:215px;'>
-                    <img src="./img/kaggle.png" id="img7" alt="">  
+            <div class="flex">
+              <div class="card">
+
+                <div class="card-image r">
+
+                  <div class="card-text">
+                    <a href="stat487.html" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip1' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front1'>
+                          <img src="./img/STAT487.png" id="img1" alt="">  
+                        </div>
+                        <div class="back" id='back1'>
+                          hello
+                        </div>
                     </div>
-                    <div class="back" id='back7' style='height:215px;'>
-                    hello
-                    </div>
+                  </div>
+                
                 </div>
+
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://minhchau.shinyapps.io/oranges/" title="" target="_blank">
+                      <h4>Time Series Shiny Dashboard</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip4' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front4'>
+                          <img src="./img/oranges.png" id="img4" alt="">  
+                        </div>
+                        <div class="back" id='back4'>
+                          hello
+                        </div>
+                    </div>
+                  </div>
+                
+                </div>
+
+              </div>
+
+
+              <div class="card">
+
+                <div class="card-image">
+
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip5' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front5'>
+                          <img src="./img/python.png" id="img5" alt="">  
+                        </div>
+                        <div class="back" id='back5'>
+                          hello
+                        </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+          
+
+              <div class="card">
+                <div class="card-image r">
+
+                  <div class="card-text">
+                    <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
+                      <h4>Cluster Analysis Research Project</h4>
+                    </a>
+                  </div>
+
+                  <div class="flip-container" id='flip6' ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front" id='front6'>
+                          <img src="./img/ICMR2.png" id="img6" alt="">  
+                        </div>
+                        <div class="back" id='back6'>
+                          hello
+                        </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+
+
             </div>
-            
-            </div>
+
+          </div>
 
         </div>
 
-        <div class="card">
-            <div class="card-image">
 
-            <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                <h4>Cluster Analysis Research Project</h4>
-                </a>
-            </div>
-
-            <div class="flip-container" id='flip8' ontouchstart="this.classList.toggle('hover');" style='height:200px;'>
-                <div class="flipper">
-                    <div class="front" id='front8' style='height:200px;'>
-                    <img src="./img/Scatter.png" id="img8" alt="">  
-                    </div>
-                    <div class="back" id='back8' style='height:200px;'>
-                    hello
-                    </div>
-                </div>
-            </div>
-            
-            </div>
-
+        <div class="grid-item">
+          <a href="page2.html" style="pointer-events: none;color:gray;">
+            <h1>&raquo;</h1>
+          </a>
         </div>
 
-        <div class="card">
-            <div class="card-image">
-
-            <div class="card-text">
-                <a href="https://drive.google.com/file/d/1QBTAUTxXp_C3B6fx2Ah9_81BhHMoNgPf/view?usp=sharing" title="" target="_blank">
-                <h4>Cluster Analysis Research Project</h4>
-                </a>
-            </div>
-
-            <div class="flip-container" id='flip9' ontouchstart="this.classList.toggle('hover');" style='height:185px;'>
-                <div class="flipper">
-                    <div class="front" id='front9' style='height:185px;'>
-                    <img src="./img/covid19.png" id="img9" alt="">  
-                    </div>
-                    <div class="back" id='back9' style='height:185px;'>
-                    hello
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    </div>
-
-    </div>
-
-      
-      </div>  
-
-      <div class="grid-item">
-        <a href="page2.html" style="pointer-events: none;color:gray;">
-          <h1>&raquo;</h1>
-        </a>
       </div>
 
-    </div>
-
-    <div class="container" align='center'>
+      <div class="container" align='center'>
         <div>
           &copy;2021 Minh Chau
         </div>
       </div>
 
       <br><br>
-
-    </div>
-
+    
+  </div>
+    <script src="height.js"></script>
+    
     <script>
-        var img = document.getElementById('img9');
-        console.log(img.height)
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("card-image");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      // Show filtered elements
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      // Hide elements that are not selected
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current control button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
     </script>
 
   </body>
