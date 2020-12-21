@@ -105,6 +105,9 @@ div.container {
   }
 }
 
+.container{
+  font-family: 'Monaco', monospace;
+}
 
 .Big_container{
   display: grid;
@@ -134,7 +137,7 @@ div.container {
 }
 
 .big-icon {
-  font-size: 3rem;
+  font-size: 4em;
 }
 
 .big-icon:hover {
@@ -312,6 +315,8 @@ img {
 
 
 
+/* Filtered buttons css */
+
 #myBtnContainer{
   margin-top:2.5rem;
   text-align:left;
@@ -321,36 +326,33 @@ img {
   display: block;
 }
 
-/* Style the buttons */
 .btn {
-  margin-top:20px !important;
+  font-family: 'Monaco', monospace;
   font-size: 0.9rem;
   padding: 10px 14px 9px;
   border-radius: 15px !important;
-  background-color:#EE82EE !important;
-  color:white !important;
-  font-weight:bold;
+  background-color: #f1f1f1;
   cursor: pointer;
+  margin-top:20px;
+  border: 2px solid black;
 }
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  margin-top:20px !important;
-  font-size: 0.9rem;
-  padding: 10px 14px 9px;
-  border-radius: 15px !important;
-  color:white !important;
-  font-weight:bold;
   background-color: #ddd;
 }
 
 /* Add a dark background to the active button */
 .btn.active {
-  margin-top:20px !important;
-  font-size: 0.9rem;
-  padding: 10px 14px 9px;
+  outline: none;
+  font-weight: bold;
   border-radius: 15px !important;
-  font-weight:bold;
   background-color: #666;
   color: white;
+}
+
+
+.homepage a{
+  text-decoration: none;
+  color: black !important;
 }
