@@ -1,0 +1,138 @@
+<html>
+<head>
+    <script src="https://cdn.goinstant.net/client/platform.min.js"></script>    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+        var playlistCollection;
+        var this_session;
+        var playing = false;
+
+        $( document ).ready(function() {
+            var url = 'https://goinstant.net/jukebox/jukebox/123';
+            goinstant.connect(url, function(err, platform, session) {
+              if (err) {
+                console.log('error connecting');
+                return;
+              }
+              
+              this_session = session;
+
+              playlistCollection = session.collection('/playlist');
+              
+              playlistCollection.on('set', addListener, function(err, command, context) {
+                if (err) {
+                  console.log("Playlist collection on listener fail");
+                }
+              });
+                            
+              function addListener(key, value, context) {
+                  play_firstsong();
+              }
+
+              play_firstsong();
+            });  
+        });
+        
+        function do_voting(data, keys) {
+            var got = keys.length - 1;
+            for (idx in keys) {
+                if (idx == 0) {
+                    continue;
+                }
+                var vote_key_name = keys[idx].name + "/votes";
+                var vote_key = this_session.key(vote_key_name);
+                vote_key.get(function(err, value, context) {
+                    if (value == null || value.length == 0) {
+                        console.log("No vote keys", context.key);
+                        return;
+                    }
+                    console.log("vote keys", context.key, Object.keys(value));
+                    var total = 0;
+                    for (vote_idx in value) {
+                       var vote = value[vote_idx];
+                       console.log("vote: ", vote);
+                       total = total + vote;
+                    }
+                    console.log("total: ", total);
+                });
+            }
+        }
+
+        function play_firstsong() {
+            playlistCollection.get(function(err, data, keys) {
+                if (err) {
+                    console.log("Could not get collection");
+                } else {
+                    if(playing == false && data.length > 0) {
+                        do_voting(data, keys);
+
+                        createPlayer(data[0].vid);
+                        console.log("Key Name " + keys[0].name);
+
+                        //Globally broadcast this is playing.
+                        var key = this_session.key('/now_playing');
+                        var value = {title: data[0].title, 
+                                     thumbnail: data[0].thumbnail};
+                        key.set(value);
+
+                        keys[0].remove();
+                        playing = true;
+
+                    }
+                }
+            });
+        }  
+          
+        // This function is called when an error is thrown by the player
+        function onPlayerError(errorCode) {
+            console.log("An error occured of type:" + errorCode);
+            //Most likely a copyright issue, so move onto the next song.
+            playing = false;
+            play_firstsong();
+        }
+
+        // This function is called when the player changes state
+        function onPlayerStateChange(newState) {
+            console.log("State Changed" + newState);
+
+            if(newState == "0") {
+                playing = false;
+                console.log("Song stopped, request a new one.");
+                play_firstsong();
+            }
+        }
+       
+        // This function is automatically called by the player once it loads
+        function onYouTubePlayerReady(playerId) {            
+            console.log("YouTube Player is Ready");
+            
+            ytplayer = document.getElementById("ytPlayer");
+
+            ytplayer.addEventListener("onStateChange", "onPlayerStateChange");
+            ytplayer.addEventListener("onError", "onPlayerError");
+        }
+                
+        function createPlayer(videoId) {
+            console.log("Creating New Video Player");
+            
+            //Destroy Old Video
+            swfobject.removeSWF("ytPlayer");
+            
+            //Add New Element
+            var e = $('<div></div>');
+            e.attr('id', 'ytapiplayer');
+            $('body').append(e);
+            
+            var params = { allowScriptAccess: "always" };
+            var atts = { id: "ytPlayer" };
+            
+            swfobject.embedSWF("http://www.youtube.com/v/" + videoId + "?enablejsapi=1&playerapiid=ytplayer&version=3&autoplay=1",
+                               "ytapiplayer", "100%", "100%", "8", null, null, params, atts);
+        } 
+      </script>
+    
+</head>
+<body> 
+</body>
+</html>

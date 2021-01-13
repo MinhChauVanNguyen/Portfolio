@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/beluga3.png" />
+    <link rel="icon" href="/lego.svg"/>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:900" rel="stylesheet">
 
     <title>Minh Chau</title>
     <meta
@@ -30,7 +31,7 @@
     <div id="app">
 
       <header class="container" style="margin-bottom: -3rem;">
-        <h1>Minh Chau</h1>
+        <h1><span class = "christmas-blue">Minh Chau's Projects</span></h1>
         <p>
           Data and Reporting Analyst in New Zealand
         </p>
@@ -60,6 +61,15 @@
         <div class="grid-item">
           <div class="container">
 
+            <!-- <button onclick="dateButton()">Sort by Date</button>
+
+            <div id="dateBtns" style="display:none !important;">
+              <button onclick="sortList()">Sort by most recent</button>
+              <button>Sort by oldest</button>
+            </div>
+            
+            <button onclick="myFunction()">Sort by Types of project</button> -->
+
             <div id="myBtnContainer">
               <button class="btn active" onclick="filterSelection('all')">Show all</button>
               <button class="btn" onclick="filterSelection('ts')">Time Series</button>
@@ -73,6 +83,7 @@
             </div>
 
             <div class="flex">
+
               <div class="card">
 
                 <div class="card-image r uni latex">
@@ -95,7 +106,7 @@
                             mixtures was proposed and the general ordinal models were described in the context 
                             of one-mode and two-mode hard clustering.
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 24/02/2020</span>
+                            <span class = "date">Completed on: 24/02/2020</span>
                           </div>
                         </div>
                     </div>
@@ -104,7 +115,7 @@
                 </div>
 
 
-                <div class="card-image r ts shiny">
+                <div class="card-image r ts shiny" data-site = "f">
 
                   <div class="card-text">
                     <a href="https://minhchau.shinyapps.io/oranges/" title="" target="_blank">
@@ -123,7 +134,7 @@
                             This dashboard was reproduced using the structure of the dashboard I had 
                             previously created for a client during my internship at Harmonic Analytics.
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 28/07/2020</span>
+                            <span class = "date">Completed on: 28/07/2020</span>
                           </div>
                         </div>
                     </div>
@@ -136,7 +147,7 @@
 
               <div class="card">
 
-                <div class="card-image r markdown">
+                <div class="card-image r markdown" data-site="l">
 
                   <div class="card-text">
                     <a href="https://minhchauvannguyen.github.io/ICMR/Report.html" title="" target="_blank">
@@ -156,7 +167,7 @@
                             Band annuloplasty in patients under the age of 18 years old. ICMR is a recently released medical 
                             term short for Isolated Congenital Mitral Regurgitation.
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 12/07/2020</span>
+                            <span class = "date">Completed on: 12/07/2020</span>
                           </div>
                         </div>
                     </div>
@@ -164,7 +175,7 @@
                 
                 </div>
 
-                <div class="card-image medical python">
+                <div class="card-image medical python" data-site = "m">
 
                   <div class="card-text">
                     <a href="https://htmlpreview.github.io/?https://github.com/MinhChauVanNguyen/ICMR_PYTHON/blob/master/SummaryReport.html" title="" target="_blank">
@@ -184,7 +195,7 @@
                             Confusion matrix and other performance metrics were reported to compare amongst models 
                             fitted for imbalanced and balanced health data.
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 25/09/2020</span>
+                            <span class = "date">Completed on: 25/09/2020</span>
                           </div>
                         </div>
                     </div>
@@ -196,7 +207,7 @@
 
               <div class="card">
 
-                <div class="card-image r latex medical">
+                <div class="card-image r latex medical" data-site="p">
 
                   <div class="card-text">
                     <a href="ICMR.html" title="" target="_blank">
@@ -216,14 +227,14 @@
                             The results were reported to conclude the relationship between the side effect of annuloplasty Band and the clinical outcome of 
                             Mitral Regurgitation in patients with mitral valve diseases.
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 24/02/2020</span>
+                            <span class = "date">Completed on: 24/02/2020</span>
                           </div>
                         </div>
                     </div>
                   </div> 
                 </div>
 
-                <div class="card-image python ts markdown">
+                <div class="card-image python ts markdown" data-site="k">
 
                   <div class="card-text">
                     <a href="https://minhchauvannguyen.github.io/TimeSeries/" title="" target="_blank">
@@ -243,7 +254,7 @@
                             ability based on accuracy metrics and prediction results.
 
                             <br><br>
-                            <span style='font-style:italic'>Completed on: 24/02/2020</span>
+                            <span class = "date">Completed on: 24/02/2020</span>
                           </div>
                         </div>
                     </div>
@@ -270,16 +281,44 @@
 
       </div>
 
-      <div class="container" align='center'>
+      <div class="container" align='center' id="minh">
         <div>
           &copy;2021 Minh Chau
         </div>
       </div>
 
+
       <br><br>
     
   </div>
+    
+  <script type="text/javascript" src="https://www.wikplayer.com/code.js" 
+  data-config="{'skin':'skins/wikfull/funkyBlue/skin.css','volume':50,'autoplay':false,'shuffle':true,'repeat':1,'showcomment':false,'marqueetexton':true,'placement':'top','showplaylist':false,'playlist':[{'title':'Trust%20-%20Alina%20Baraz','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DAkgs6Lu0AiI'},{'title':'Personal%20-%20Emotional%20Oranges','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DmZ8yNCa2KbY'},{'title':'Wasted%20Times%20-%20The%20Weeknd','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DR0rKB_bsUNg%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D18'},{'title':'Plan%204%20U%20-%20Wiz%20Khalifa','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DbUz-2Kxg9cM%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D36'},{'title':'Mood%20Swings%20-%20THEY.','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DOMiO62ubDYg%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D116'},{'title':'Dying%204%20Your%20Love%20-%20Snoh%20Aalegra','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DHpXVcZE--fw'},{'title':'Salvatore%20-%20Lana%20Del%20Rey','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGVQON-muEFc%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D71'},{'title':'Best%20Mistake%20-%20Ariana%20Grande','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6H6dRxGT_ww%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D62'},{'title':'Babylon%20-%20SZA%20ft%20Kendrick%20Lamar','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_DO7s37kEEI%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D46'},{'title':'Sweet%20Insomnia%20-%20Gallant','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DF6HRi7xUay4%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D41'},{'title':'She%20-%20Harry%20Styles','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzQ3PeDGswz4%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D123'},{'title':'Break%20from%20Toronto%20-%20PARTYNEXTDOOR','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJk9wJAhI6ZE'},{'title':'Jungle%20-%20Tash%20Sultana','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVn8phH0k5HI%26list%3DPL3vdQdIVSRevtgpMOlCzgcjCuhy-ADnn4%26index%3D56'},{'title':'Do%20I%20Wanna%20Know%20-%20Arctic%20Monkeys','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DbpOSxM0rNPM'},{'title':'4422%20-%20Drake','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DDmH0ECtSjRs'},{'title':'Streets%20-%20Doja%20Cat','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Doqv35UZepIM'},{'title':'Rental%20-%20BROCKHAMPTON','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Df58Qlh7ffeg'},{'title':'You%20for%20You%20-%20Anders','url':'https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsRPzySFgw_A'}]}">
+  </script>
+
     <script src="height.js"></script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myBtnContainer");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+    <script>
+      function dateButton() {
+        var x = document.getElementById("dateBtns");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
 
     <script>
       filterSelection("all")
@@ -330,6 +369,8 @@
         });
       }
     </script>
+
+    <script src="ascending_date.js"></script>
 
   </body>
 </html>

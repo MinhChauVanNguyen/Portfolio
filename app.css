@@ -2,11 +2,11 @@ html,
 body {
   margin: 0;
   height: 100%;
-  background: #ffbb00;
+  background: #5ac8c8;
 }
 
 #app {
-  font-family: 'Monaco', monospace;
+  font-family: 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
@@ -106,7 +106,7 @@ div.container {
 }
 
 .container{
-  font-family: 'Monaco', monospace;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 .Big_container{
@@ -236,27 +236,7 @@ img {
 .card .card-text {
   border: solid 2px lightskyblue;
   padding: 0.75rem 1rem 0.75rem;
-  background-color:#f69ec4;
-}
-
-.card .card-image:hover .overlay {
-  opacity: 1;
-}
-
-.overlay {
-  display : flex;
-  align-items : center;
-  justify-content: center;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  width: 100%;
-  /*height: 100%;*/
-  bottom:0;
-  transition: .5s ease;
-  opacity:0;
-  /* padding: 20px; */
-  font-size:12px;
-  font-weight:700;
+  background-color:#5ac8c8;
 }
 
 
@@ -327,7 +307,7 @@ img {
 }
 
 .btn {
-  font-family: 'Monaco', monospace;
+  font-family: 'Trebuchet MS', sans-serif;
   font-size: 0.9rem;
   padding: 10px 14px 9px;
   border-radius: 15px !important;
@@ -337,9 +317,19 @@ img {
   border: 2px solid black;
 }
 
-/* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #ddd;
+  color: #035ee2;
+  background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/blue_glitter.gif) repeat;
+  background: -o-linear-gradient(transparent, transparent) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin: 0;
+  padding: 10px 14px 9px;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 999999;
+  -webkit-background-clip: text;
 }
 
 /* Add a dark background to the active button */
@@ -347,12 +337,40 @@ img {
   outline: none;
   font-weight: bold;
   border-radius: 15px !important;
-  background-color: #666;
+  background-color:#a4add3;
   color: white;
 }
 
-
+/* icons href */
 .homepage a{
   text-decoration: none;
   color: black !important;
 }
+
+/* project date */
+.date{
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding-bottom: 6px;
+  padding-left: 0.5rem;
+  font-style:italic;
+}
+
+/* website title */
+.christmas-blue {
+  color: #035ee2;
+  background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/blue_glitter.gif) repeat;
+  background: -o-linear-gradient(transparent, transparent) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 999999;
+  -webkit-background-clip: text;
+}
+  
